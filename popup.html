@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>StickyTasks</title><link rel="stylesheet" href="base.css"><link rel="stylesheet" href="popup.css"></head>
+<body class="popup-page">
+  <header class="popup-header"><div><p class="eyebrow">YOUR DAILY BOARD</p><h1>StickyTasks <span id="pending-count" class="count-pill">0</span></h1></div><a class="settings-link" href="settings.html" target="_blank" aria-label="Open settings">⚙</a></header>
+  <form id="add-task-form" class="add-form"><label class="sr-only" for="new-task">New task</label><input id="new-task" type="text" maxlength="240" placeholder="Write a task and press Enter…" autocomplete="off" required><label class="sr-only" for="new-color">New note colour</label><select id="new-color" aria-label="New note colour"><option value="yellow">Yellow</option><option value="pink">Pink</option><option value="green">Green</option><option value="blue">Blue</option><option value="orange">Orange</option></select><button class="primary-button" type="submit" aria-label="Add task">+</button></form>
+  <nav class="filters" aria-label="Filter tasks"><button data-filter="pending" class="active" aria-pressed="true">Pending</button><button data-filter="completed" aria-pressed="false">Completed</button><button data-filter="all" aria-pressed="false">All</button></nav>
+  <main id="task-list" class="task-list" aria-live="polite"></main><p id="empty-state" class="empty-state" hidden></p><p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+  <footer class="popup-footer"><a href="board.html" target="_blank">Open full board ↗</a><button id="clear-completed" class="text-button">Clear completed</button></footer>
+  <script src="storage.js"></script><script src="common.js"></script><script src="popup.js"></script>
+</body></html>
